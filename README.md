@@ -1,5 +1,5 @@
 # saml_aws_jumcloud_api
-Script for generate credentian from aws-cli with saml used jumpcloud
+Script to generate credential for aws-cli when you have SAML authentication with JumpCloud
 
 ## Install aws-cli
 
