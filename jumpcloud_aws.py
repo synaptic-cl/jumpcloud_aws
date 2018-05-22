@@ -16,7 +16,8 @@ import yaml
 
 
 CFG = {}
-with open("./config.yml", 'r') as ymlfile:
+current_app = os.path.dirname(__file__)
+with open(os.path.join(current_app, "./config.yml"), 'r') as ymlfile:
     CFG = yaml.load(ymlfile)
 regions = '\n'.join(
     ["%s) %s" % (i, x['name']) for i, x in enumerate(CFG.get('regions', []))]
