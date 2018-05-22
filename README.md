@@ -1,5 +1,4 @@
-# Saml with to AWS Used JumpCloud Api
-Script to generate credential for aws-cli when you have SAML authentication with JumpCloud
+# Saml with to AWS Used JumpCloud
 Command to generate credentials for aws-cli when you have SAML authentication with JumpCloud
 
 Source : https://s3.amazonaws.com/awsiammedia/public/sample/SAMLAPICLIADFS/samlapi_formauth.py
@@ -13,12 +12,26 @@ Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-gener
 ## Install
 
 ```bash
+pip install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.1#egg=jumpcloud_aws
+```
 
+### Use Command
+
+```bash
+jumpcloud_aws
+# or add params
+jumpcloud_aws --email [EMAIL] --password [PASSWORD] --region 0
+```
+
+for know the available regions:
+
+```
+jumpcloud_aws --help
 ```
 
 
 
-# User With Docker
+### Use With Docker
 
 ```bash
 # Build
@@ -40,32 +53,4 @@ docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credent
 docker build -t saml .
 # Run
 docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
-```
-
-## Install aws-cli
-
-```
-# macOS
-brew install awscli
-```
-
-### Config
-
-Add in your file ~/.aws/credentials the next configs:
-
-```
-[default]
-output =
-region =
-aws_access_key_id =
-aws_secret_access_key =
-aws_session_token =
-```
-
-# python
-
-```
-pip install requirements.txt
-python saml_jumpcloud_api.py
-# Then enter your email, password and aws region
 ```
