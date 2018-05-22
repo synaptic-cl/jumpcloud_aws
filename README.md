@@ -54,3 +54,7 @@ docker build -t saml .
 # Run
 docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
 ```
+
+## TODO
+* Tests
+* Add validation when not exist the selected region

@@ -14,7 +14,6 @@ from urllib.parse import urlparse
 import click
 import yaml
 
-
 CFG = {}
 current_app = os.path.dirname(__file__)
 with open(os.path.join(current_app, "./config.yml"), 'r') as ymlfile:
@@ -95,7 +94,10 @@ def saml_assertion(username, password):
     # Better error handling is required for production use.
     if (assertion == ''):
         # TODO: Insert valid error checking/handling
-        print('Response did not contain a valid SAML assertion')
+        print(
+            'Response did not contain a valid SAML assertion.',
+            'Maybe your username or password it is not correct'
+        )
         sys.exit(0)
 
     # Parse the returned assertion and extract the authorized roles
@@ -156,7 +158,8 @@ def saml_assertion(username, password):
 @click.command()
 @click.option('--email', prompt=True, help="Your email")
 @click.option('--password', prompt=True, hide_input=True, help="Your Password")
-@click.option('--region',
+@click.option(
+    '--region',
     prompt=regions + "\nSelected Region",
     help="Selected a region:\n\n" + regions
 )
