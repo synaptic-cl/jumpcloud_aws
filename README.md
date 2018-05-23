@@ -4,6 +4,9 @@ Command to generate credentials for aws-cli when you have SAML authentication wi
 Source : https://s3.amazonaws.com/awsiammedia/public/sample/SAMLAPICLIADFS/samlapi_formauth.py
 Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-general-solution-for-federated-apicli-access-using-saml-2-0
 
+[![Build Status](https://semaphoreci.com/api/v1/synaptic-cl/jumpcloud_aws/branches/develop/shields_badge.svg)](https://semaphoreci.com/synaptic-cl/jumpcloud_aws)
+
+
 #### Requirements
 
  * python 3.6
