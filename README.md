@@ -4,6 +4,9 @@ Command to generate credentials for aws-cli when you have SAML authentication wi
 Source : https://s3.amazonaws.com/awsiammedia/public/sample/SAMLAPICLIADFS/samlapi_formauth.py
 Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-general-solution-for-federated-apicli-access-using-saml-2-0
 
+[![Build Status](https://semaphoreci.com/api/v1/synaptic-cl/jumpcloud_aws/branches/develop/shields_badge.svg)](https://semaphoreci.com/synaptic-cl/jumpcloud_aws)
+
+
 #### Requirements
 
  * python 3.6
@@ -13,12 +16,12 @@ Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-gener
 ## Install
 
 ```bash
-pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.3#egg=jumpcloud_aws
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.5#egg=jumpcloud_aws
 ```
 
 ## Reinstall
 ```bash
-pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.3#egg=jumpcloud_aws --upgrade
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.5#egg=jumpcloud_aws --upgrade
 ```
 
 ### Use Command
@@ -43,7 +46,7 @@ jumpcloud_aws --help
 # Build
 docker build -t saml .
 # Run
-docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
+docker run --rm -it -v $(pwd)/jumpcloud_aws:/src/jumpcloud_aws -v $HOME/.aws/credentials:/root/.aws/credentials saml
 ```
 
 
@@ -58,7 +61,7 @@ docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credent
 # Build
 docker build -t saml .
 # Run
-docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
+docker run --rm -it -v $(pwd)/jumpcloud_aws:/src/jumpcloud_aws -v $HOME/.aws/credentials:/root/.aws/credentials saml
 ```
 
 ## TODO
