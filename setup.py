@@ -10,11 +10,12 @@ setup(
         'bs4==0.0.1',
         'requests==2.13.0',
         'six==1.10.0',
-        'awscli==1.15.25',
-        'click==6.7'
+        'click==6.7',
+        'PyYAML==3.12'
     ],
     entry_points='''
         [console_scripts]
         jumpcloud_aws=jumpcloud_aws:cli
     ''',
+    python_requires=">==3.6"
 )
