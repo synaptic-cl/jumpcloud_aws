@@ -8,16 +8,17 @@ Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-gener
 
  * python 3.6
  * pip
+ * awscli
 
 ## Install
 
 ```bash
-pip install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.2#egg=jumpcloud_aws
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.3#egg=jumpcloud_aws
 ```
 
 ## Reinstall
 ```bash
-pip install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.2#egg=jumpcloud_aws --upgrade
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.3#egg=jumpcloud_aws --upgrade
 ```
 
 ### Use Command
