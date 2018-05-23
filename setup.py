@@ -3,7 +3,10 @@ from setuptools import setup
 setup(
     name='jumpcloud_aws',
     version='0.1',
-    py_modules=['jumpcloud_aws'],
+    packages=['jumpcloud_aws'],
+    package_data={
+        'jumpcloud_aws': ['config.yml']
+    },
     install_requires=[
         'beautifulsoup4==4.5.3',
         'boto3==1.7.22',
@@ -15,7 +18,8 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        jumpcloud_aws=jumpcloud_aws:cli
+        jumpcloud_aws=jumpcloud_aws.app:cli
     ''',
-    python_requires=">==3.6"
+    python_requires=">==3.6",
+    include_package_data=True
 )

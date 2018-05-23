@@ -13,12 +13,12 @@ Referenced from : https://aws.amazon.com/blogs/security/how-to-implement-a-gener
 ## Install
 
 ```bash
-pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.4#egg=jumpcloud_aws
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.5#egg=jumpcloud_aws
 ```
 
 ## Reinstall
 ```bash
-pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.4#egg=jumpcloud_aws --upgrade
+pip3 install git+git://github.com/synaptic-cl/jumpcloud_aws.git@v0.1.5#egg=jumpcloud_aws --upgrade
 ```
 
 ### Use Command
@@ -43,7 +43,7 @@ jumpcloud_aws --help
 # Build
 docker build -t saml .
 # Run
-docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
+docker run --rm -it -v $(pwd)/jumpcloud_aws:/src/jumpcloud_aws -v $HOME/.aws/credentials:/root/.aws/credentials saml
 ```
 
 
@@ -58,7 +58,7 @@ docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credent
 # Build
 docker build -t saml .
 # Run
-docker run --rm -it -v $(pwd)/:/src -v $HOME/.aws/credentials:/root/.aws/credentials saml
+docker run --rm -it -v $(pwd)/jumpcloud_aws:/src/jumpcloud_aws -v $HOME/.aws/credentials:/root/.aws/credentials saml
 ```
 
 ## TODO
